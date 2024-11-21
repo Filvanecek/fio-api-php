@@ -22,11 +22,10 @@
     "ext-curl": "*",
     "ext-json": "*",
     "guzzlehttp/guzzle": "~6.1|~7.0",
-    "composer/ca-bundle": "^1.5"
+    "composer/ca-bundle": "^1.5",
     "ext-mbstring": "*",
     "ext-simplexml": "*",
-    "ext-xmlwriter": "*",
-    "guzzlehttp/guzzle": "~6.1|~7.0"
+    "ext-xmlwriter": "*"
   },
   "require-dev": {
     "phpunit/phpunit": "9.5.10",
