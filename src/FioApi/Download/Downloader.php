@@ -1,28 +1,31 @@
 <?php
 declare(strict_types = 1);
 
-namespace FioApi;
+namespace FioApi\Download;
 
 use Composer\CaBundle\CaBundle;
+use FioApi\Download\Entity\TransactionList;
 use FioApi\Exceptions\InternalErrorException;
 use FioApi\Exceptions\TooGreedyException;
 use GuzzleHttp\Client;
+use FioApi\Transferrer;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\BadResponseException;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\ResponseInterface;
 
-class Downloader
+class Downloader extends Transferrer
 {
     /** @var UrlBuilder */
-    protected $urlBuilder;
+    protected \FioApi\UrlBuilder $urlBuilder;
 
     /** @var ?ClientInterface */
-    protected $client;
+    protected ?ClientInterface $client;
 
     public function __construct(string $token, ClientInterface $client = null)
     {
+        parent::__construct($token, $client);
         $this->urlBuilder = new UrlBuilder($token);
         $this->client = $client;
     }
