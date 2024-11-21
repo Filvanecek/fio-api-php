@@ -1,5 +1,5 @@
 {
-  "name": "mhujer/fio-api-php",
+  "name": "filvanecek/fio-api-php",
   "type": "library",
   "description": "Fio API PHP implemention",
   "keywords": [
@@ -52,7 +52,6 @@
       "@test"
     ],
     "test": "phpunit",
-    "phpcs": "phpcs --standard=PSR2 src && phpcs --standard=PSR2 tests",
-    "phpstan": "phpstan analyse -c phpstan.neon"
+    "phpcs": "phpcs --standard=PSR2 src && phpcs --standard=PSR2 tests"
   }
 }
