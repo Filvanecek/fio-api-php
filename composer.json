@@ -1,5 +1,5 @@
 {
-  "name": "filvanecek/fio-api-php",
+  "name": "mhujer/fio-api-php",
   "type": "library",
   "description": "Fio API PHP implemention",
   "keywords": [
@@ -39,14 +39,8 @@
       "FioApi\\": "src/FioApi"
     }
   },
-  "autoload-dev": {
-    "psr-4": {
-      "FioApi\\": "tests/FioApi"
-    }
-  },
   "scripts": {
     "ci": [
-      "@phpstan",
       "@phpcs",
       "@test"
     ],
